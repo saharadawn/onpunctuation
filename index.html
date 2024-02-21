@@ -5,11 +5,78 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>on punctuation</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
 </head>
 <body>
-<p>"on punctuation" HI HI HI</p> 
+    <header><marquee scrollamount="10" behavior="alternate" direction="right">.,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- 
+        .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?-
+         .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- 
+        .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?-</marquee></header>
+<div class="hidden">
+    <p>hello</p>
+    
+</div>
+</div>
+<div class="button">
 
-        
-    </div>
+</div>
+
+</div>
+
+<style>
+   
+
+    @keyframes typing {
+        from { width: 0 }
+        to { width: 100% }
+    }
+</style>
+</head>
+<body>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<p id="demo"></p>
+
+<script>
+    var i = 0;
+    var txt = 'ON PUNCTUATION.';
+    var speed = 200;
+    var settleSpeed = 1000; // Speed to settle on one letter
+    var settleCount = 10; // Number of cycles to settle on one letter
+    var cycleLetters = ['.', ',', '!', '?'];
+    var cycleIndex = 0;
+    
+    function typeWriter() {
+        if (i < txt.length) {
+            if (i === txt.length - 1) {
+                if (settleCount > 0) {
+                    var randomLetter = cycleLetters[Math.floor(Math.random() * cycleLetters.length)];
+                    document.getElementById("demo").innerHTML = txt.substr(0, i) + randomLetter;
+                    setTimeout(typeWriter, speed);
+                    settleCount--;
+                } else {
+                    document.getElementById("demo").innerHTML = txt;
+                    i++;
+                    setTimeout(typeWriter, settleSpeed);
+                }
+            } else {
+                document.getElementById("demo").innerHTML += txt.charAt(i);
+                i++;
+                setTimeout(typeWriter, speed);
+            }
+        }
+    }
+    
+    document.addEventListener('DOMContentLoaded', function() {
+        typeWriter();
+    });
+    </script>
+</div>
+
 </body>
 </html>

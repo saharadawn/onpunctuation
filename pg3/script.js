@@ -1,32 +1,3 @@
-// Function to create and animate falling images
-function createFallingImage() {
-  const container = document.querySelector('.container');
-  const image = document.createElement('img');
-  image.src = 'question.png'; // Replace with the URL or path to your image
-  image.classList.add('falling-image');
-  container.appendChild(image);
-  
-  const imageWidth = 100; // Adjust the width to your desired size
-  const startPosition = Math.random() * (window.innerWidth - imageWidth); // Random start position within window width
-  const fallDuration = Math.random() * 3000 + 2000; // Random fall duration between 2 to 5 seconds
-  const rotation = Math.random() * 360; // Random rotation between 0 to 360 degrees
-
-  image.style.left = `${startPosition}px`;
-  image.style.transform = `rotate(${rotation}deg)`; // Apply random rotation
-
-  // Animation for falling
-  image.animate(
-    [
-      { top: '-100px', transform: `rotate(${rotation}deg)` },
-      { top: `${window.innerHeight}px`, transform: `rotate(${rotation + 720}deg)` } // Rotate twice for full spin during fall
-    ],
-    {
-      duration: fallDuration,
-      easing: 'linear',
-      iterations: Infinity // Repeat infinitely
-    }
-  );
-}
 
 // Function to simulate typewriter effect
 function typeWriterEffect(textElement, text, speed) {

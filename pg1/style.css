@@ -71,6 +71,7 @@ p{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    color: white
 
 }
 
@@ -105,4 +106,8 @@ p{
 
 .visible {
   opacity: 1;
+}
+
+.body-text{
+  color: white
 }

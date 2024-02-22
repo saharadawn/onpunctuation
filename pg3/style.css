@@ -41,8 +41,8 @@ p{
 
 .body-text{
     display: flex;
-    margin-left: 8rem;
-    margin-right: 8rem;
+    margin-left: 4rem;
+    margin-right: 4rem;
     text-align: justify;
     font-size: 2.5rem;
     align-items: center;
@@ -60,6 +60,7 @@ p{
     flex: 1;
     padding-right: 5rem;
     transition: margin-left 20s ease;
+    font-size: 2.5rem;
   }
   .image-container {
     max-width: 0;

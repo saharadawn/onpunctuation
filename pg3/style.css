@@ -41,8 +41,8 @@ p{
 
 .body-text{
     display: flex;
-    margin-left: 4rem;
-    margin-right: 4rem;
+    margin-left: 8rem;
+    margin-right: 8rem;
     text-align: justify;
     font-size: 2.5rem;
     align-items: center;
@@ -50,21 +50,46 @@ p{
 }
 
 
-.container {
-    position: relative;
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 20px;
   }
-  
-  #hidden-image-container {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 999; /* Ensure the image appears on top of the text */
-}
+  .text {
+    flex: 1;
+    padding-right: 5rem;
+    transition: margin-left 20s ease;
+  }
+  .image-container {
+    max-width: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-width 0.7s ease, max-height .7s ease;
 
-  .clickable {
-    color: red;
-    cursor: pointer;
+
   }
+  .image-container img {
+   height: auto;
+   max-width: 50%;
+   max-height: 50%;
+   margin-top: 5rem;
+   padding-right: -10rem;
+
+  }
+  .expanded {
+    max-width: 70%;
+    max-height: 70%;
+  }
+
+  .trigger{
+        animation: blinker 1s linear infinite;
+      }
+      
+      @keyframes blinker {
+        50% {
+          opacity: 0;
+        }
+      }
   
-  
-  
+      

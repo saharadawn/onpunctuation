@@ -1,3 +1,4 @@
+
 const trigger = document.querySelector('.trigger');
 const imageContainer = document.querySelector('.image-container');
 

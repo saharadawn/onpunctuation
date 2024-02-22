@@ -47,11 +47,20 @@ p{
 }
 .body-text{
     display: flex;
+    flex-direction: row;
     margin-left: 4rem;
     margin-right: 4rem;
     text-align: justify;
     font-size: 3rem;
     align-items: center;
+}
+
+.first-box{
+    text-align: justify
+}
+
+.second-box{
+    text-align: justify
 }
 
 .footer{

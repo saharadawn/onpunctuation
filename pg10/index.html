@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,11 +9,72 @@
     <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-<p>Complications make eventually for simplicity and therefore I have always liked dependent adverbial clauses. I have like dependent adverbial clauses because of their variety of dependence and independence. You can see how loving the intensity of complication of these things that commas would be degrading. Why if you want the pleasure of concentrating on the final simplicity of excessive complication would you want any artificial aid to bring about that simplicity. Do you see now why I feel about that simplicity. Do you see now why I feel about the comma as I did and as I do.
 
-    Think about anything you really like to do and you will see what I mean.
-</p>    
-        
+<header>
+    <marquee scrollamount="10" behavior="alternate" direction="right">.,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?-
+         .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?-
+         .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- 
+        .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?-</marquee>
+</header>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="container">
+<div class="body-text">
+    <p id="demo"></p>
+    
+</div> 
+
+<script>
+    var i = 0;
+    var txt = 'Complications make eventually for simplicity and therefore I have always liked dependent adverbial clauses. I have like dependent adverbial clauses because of their variety of dependence and independence. You can see how loving the intensity of complication of these things that commas would be degrading. Why if you want the pleasure of concentrating on the final simplicity of excessive complication would you want any artificial aid to bring about that simplicity. Do you see now why I feel about that simplicity. Do you see now why I feel about the comma as I did and as I do.Think about anything you really like to do and you will see what I mean.';
+    var speed = 100;
+    var settleSpeed = 1000; // Speed to settle on one letter
+    var settleCount = 10; // Number of cycles to settle on one letter
+    var cycleLetters = ['.', ',', '!', '?'];
+    var cycleIndex = 0;
+    
+    function typeWriter() {
+        if (i < txt.length) {
+            if (i === txt.length - 1) {
+                if (settleCount > 0) {
+                    var randomLetter = cycleLetters[Math.floor(Math.random() * cycleLetters.length)];
+                    document.getElementById("demo").innerHTML = txt.substr(0, i) + randomLetter;
+                    setTimeout(typeWriter, speed);
+                    settleCount--;
+                } else {
+                    document.getElementById("demo").innerHTML = txt;
+                    i++;
+                    setTimeout(typeWriter, settleSpeed);
+                }
+            } else {
+                document.getElementById("demo").innerHTML += txt.charAt(i);
+                i++;
+                setTimeout(typeWriter, speed);
+            }
+        }
+    }
+    
+    document.addEventListener('DOMContentLoaded', function() {
+        typeWriter();
+    });
+</script>
+
+</div>
+</div>
+
+<a href="https://saharadawn.github.io/onpunctuation.github.io/pg10/">
+    <div class="spinner">
+            <div class="bounce1"></div>
+            <div class="bounce2"></div>
+            <div class="bounce3"></div>
     </div>
+    </a>
+
 </body>
 </html>

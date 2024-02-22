@@ -16,7 +16,7 @@ header{
     color: white;
     font-family: xanhmono;
     font-size: 2rem;
-    border-size: 1px;
+    border-radius: 1px;
     border-bottom:1px solid rgb(193, 193, 193)
 }
 footer{
@@ -75,6 +75,10 @@ p{
 
 }
 
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
 .container {
     position: relative;
     width: 100%;
@@ -113,7 +117,6 @@ p{
 }
 
 
-/*Huge thanks to @tobiasahlin at http://tobiasahlin.com/spinkit/ */
 .footer{
   min-height: auto;
   justify-content: end;
@@ -136,7 +139,6 @@ p{
   -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
   animation: sk-bouncedelay 1.4s infinite ease-in-out both;
 }
-
 
 
 @-webkit-keyframes sk-bouncedelay {

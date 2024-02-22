@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>c28c14aa-ef6d-4c5b-ba70-c39fc2d5283c.jpg</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header>
+    <marquee scrollamount="10" behavior="alternate" direction="right">.,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?-
+         .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?-
+         .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- 
+        .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?-</marquee>
+</header>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="container">
+<div class="body-text">
+    <p id="demo"></p>
+    
+</div> 
+
+<script>
+    var i = 0;
+    var txt = 'You can see what an entirely different thing a period is from a comma, a colon or a semi-colon.';
+    var speed = 100;
+    var settleSpeed = 1000; // Speed to settle on one letter
+    var settleCount = 10; // Number of cycles to settle on one letter
+    var cycleLetters = ['.', ',', '!', '?'];
+    var cycleIndex = 0;
+    
+    function typeWriter() {
+        if (i < txt.length) {
+            if (i === txt.length - 1) {
+                if (settleCount > 0) {
+                    var randomLetter = cycleLetters[Math.floor(Math.random() * cycleLetters.length)];
+                    document.getElementById("demo").innerHTML = txt.substr(0, i) + randomLetter;
+                    setTimeout(typeWriter, speed);
+                    settleCount--;
+                } else {
+                    document.getElementById("demo").innerHTML = txt;
+                    i++;
+                    setTimeout(typeWriter, settleSpeed);
+                }
+            } else {
+                document.getElementById("demo").innerHTML += txt.charAt(i);
+                i++;
+                setTimeout(typeWriter, speed);
+            }
+        }
+    }
+    
+    document.addEventListener('DOMContentLoaded', function() {
+        typeWriter();
+    });
+</script>
+
+</div>
+</div>
+
+<footer><p>...</p></footer>
+
+</body>
+</html>

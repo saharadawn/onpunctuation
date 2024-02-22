@@ -112,7 +112,6 @@ p{
   
   .spinner .bounce2 {
     -webkit-animation-delay: -0.16s;
-    animation-delay: ;
   }
   
   @-webkit-keyframes sk-bouncedelay {

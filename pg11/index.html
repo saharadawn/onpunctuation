@@ -5,13 +5,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>c28c14aa-ef6d-4c5b-ba70-c39fc2d5283c.jpg</title>
     <link rel="stylesheet" href="style.css" />
+    <style>
+        header {
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
-<p>When it gets really difficult you want to disentangle rather than to cut the knot, at least of anybody feels who is working with any thread, so anybody feels who is working with any tool so anybody feels who is writing any sentence or reading it after it has been written. And what does a comma do, a comma does nothing but make easy a thing that if you like it enough is easy enough without the comma. A long complicated sentence should force itself upon you, make you know yourself knowing it and the comma, well at the most a comma is a poor period that lets you stop and take a breath but if you want to take a breath you ought to know yourself that you want to take a breath. It is not like stopping altogether has something to do with going on, but taking a breath well you are always taking a breath and why emphasize one breath rather than another breath. Anyway that is the way I felt about it and I felt that about it very very strongly. And so I almost never used a comma. The longer, the more complicated the sentence the greater the number of the same kinds of words I had following one after another, the more the very more I had of them the more I felt the passionate need of their taking care of themselves by themselves and not helping them, and thereby enfeebling them by putting in a comma.
+    <header>
+        <marquee scrollamount="10" behavior="alternate" direction="right">.,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?-
+            .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?-
+            .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?-</marquee>
+    </header>
+    <div id="demo"></div>
+    <a href="https://saharadawn.github.io/onpunctuation.github.io/pg6/">
+        <div class="spinner">
+            <div class="bounce1"></div>
+            <div class="bounce2"></div>
+            <div class="bounce3"></div>
+        </div>
+    </a>
 
-    So that is the way I felt about punctuation in prose, in poetry it is a little different but more so and later I will go into that. But that is the way I felt about punctuation in prose.
-    </p>
-        
-    </div>
+    <script>
+        var txt = 'When it gets really difficult you want to disentangle rather than to cut the knot, at least of anybody feels who is working with any thread, so anybody feels who is working with any tool so anybody feels who is writing any sentence or reading it after it has been written. And what does a comma do, a comma does nothing but make easy a thing that if you like it enough is easy enough without the comma. A long complicated sentence should force itself upon you, make you know yourself knowing it and the comma, well at the most a comma is a poor period that lets you stop and take a breath but if you want to take a breath you ought to know yourself that you want to take a breath. It is not like stopping altogether has something to do with going on, but taking a breath well you are always taking a breath and why emphasize one breath rather than another breath. Anyway that is the way I felt about it and I felt that about it very very strongly. And so I almost never used a comma. The longer, the more complicated the sentence the greater the number of the same kinds of words I had following one after another, the more the very more I had of them the more I felt the passionate need of their taking care of themselves by themselves and not helping them, and thereby enfeebling them by putting in a comma.';
+        var speed = 200;
+        var settleSpeed = 1000; // Speed to settle on one letter
+        var cycleLetters = ['.', ',', '!', '?'];
+
+        function typeWriter(text, index) {
+            var output = '';
+            for (var i = 0; i < text.length; i++) {
+                var char = text.charAt(i);
+                if (char === ' ') {
+                    output += ' '; // If it's a space, just add it without cycling
+                } else {
+                    var cycleIndex = Math.floor((i + index) / cycleLetters.length) % cycleLetters.length;
+                    var randomLetter = cycleLetters[cycleIndex];
+                    output += char === text.charAt(index) ? randomLetter : char;
+                }
+            }
+            document.getElementById("demo").innerHTML = output;
+
+            if (index < text.length) {
+                setTimeout(function () {
+                    typeWriter(text, index + 1);
+                }, speed);
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            typeWriter(txt, 0);
+        });
+    </script>
 </body>
 </html>

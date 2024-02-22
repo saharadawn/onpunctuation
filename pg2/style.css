@@ -16,7 +16,7 @@ header{
   color: rgb(8, 0, 255);
   font-family: xanhmono;
   font-size: 2rem;
-  border-size: 1px;
+  border-radius: 1px;
   border-bottom:1px solid rgb(25, 0, 255)
 }
 footer{

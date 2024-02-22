@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>c28c14aa-ef6d-4c5b-ba70-c39fc2d5283c.jpg</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header>
+    <marquee scrollamount="10" behavior="alternate" direction="right">.,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?-
+         .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?-
+         .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- 
+        .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?- .,;:!?-</marquee>
+</header>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="container">
+<div class="body-text">
+    <p id="demo"></p>
+    
+</div> 
+
+<script>
+    var i = 0;
+    var txt = 'So that is the way I felt about punctuation in prose, in poetry it is a little different but more so and later I will go into that. But that is the way I felt about punctuation in prose.';
+    var speed = 100;
+    var settleSpeed = 1000; // Speed to settle on one letter
+    var settleCount = 10; // Number of cycles to settle on one letter
+    var cycleLetters = ['.', ',', '!', '?'];
+    var cycleIndex = 0;
+    
+    function typeWriter() {
+        if (i < txt.length) {
+            if (i === txt.length - 1) {
+                if (settleCount > 0) {
+                    var randomLetter = cycleLetters[Math.floor(Math.random() * cycleLetters.length)];
+                    document.getElementById("demo").innerHTML = txt.substr(0, i) + randomLetter;
+                    setTimeout(typeWriter, speed);
+                    settleCount--;
+                } else {
+                    document.getElementById("demo").innerHTML = txt;
+                    i++;
+                    setTimeout(typeWriter, settleSpeed);
+                }
+            } else {
+                document.getElementById("demo").innerHTML += txt.charAt(i);
+                i++;
+                setTimeout(typeWriter, speed);
+            }
+        }
+    }
+    
+    document.addEventListener('DOMContentLoaded', function() {
+        typeWriter();
+    });
+</script>
+
+</div>
+</div>
+
+<a href="https://saharadawn.github.io/onpunctuation.github.io/pg7/">
+    <div class="spinner">
+            <div class="bounce1"></div>
+            <div class="bounce2"></div>
+            <div class="bounce3"></div>
+    </div>
+    </a>
+
+</body>
+</html>

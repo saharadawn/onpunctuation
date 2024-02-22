@@ -76,6 +76,17 @@ p{
     -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
     animation: sk-bouncedelay 1.4s infinite ease-in-out both;
   }
+
+  #demo{
+    font-size: 3.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    color: white;
+    margin:4rem;
+    text-align: justify
+
+}
   
    
   @-webkit-keyframes sk-bouncedelay {
